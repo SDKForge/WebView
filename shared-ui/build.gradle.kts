@@ -14,12 +14,17 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                // put your multiplatform dependencies here
+                implementation(compose.foundation)
             }
         }
         commonTest {
             dependencies {
                 implementation(libs.kotlin.test)
+            }
+        }
+        androidMain {
+            dependencies {
+                implementation("androidx.webkit:webkit:1.14.0")
             }
         }
     }
