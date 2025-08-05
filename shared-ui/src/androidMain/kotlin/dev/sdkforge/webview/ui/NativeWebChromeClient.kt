@@ -14,7 +14,10 @@ import android.webkit.WebChromeClient
 import android.webkit.WebStorage
 import android.webkit.WebView
 
-internal class NativeWebChromeClient : WebChromeClient() {
+@Suppress("ktlint:standard:class-signature")
+internal class NativeWebChromeClient(
+    internal val webViewController: WebViewController,
+) : WebChromeClient() {
 
     override fun getDefaultVideoPoster(): Bitmap? {
         println("getDefaultVideoPoster")
@@ -208,6 +211,8 @@ internal class NativeWebChromeClient : WebChromeClient() {
     ) {
         println("onReceivedTitle")
         println("title -> $title")
+
+        webViewController.title = title
     }
 
     override fun onReceivedTouchIconUrl(
