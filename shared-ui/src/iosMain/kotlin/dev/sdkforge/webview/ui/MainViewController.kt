@@ -34,6 +34,9 @@ fun MainViewController() = ComposeUIViewController(
     LaunchedEffect(webViewController.pageState) {
         println("Page state: ${webViewController.pageState}")
     }
+    LaunchedEffect(webViewController.title) {
+        println("Title: ${webViewController.title}")
+    }
 
     WebView(
         webViewController = webViewController,

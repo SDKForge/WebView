@@ -26,44 +26,73 @@ class NativeUIDelegate :
         webView: WKWebView,
         showLockdownModeFirstUseMessage: String,
         completionHandler: (WKDialogResult) -> Unit,
-    ) = Unit
+    ) {
+        println("showLockdownModeFirstUseMessage+completionHandler")
+        println(showLockdownModeFirstUseMessage)
+    }
 
     override fun webView(
         webView: WKWebView,
         requestDeviceOrientationAndMotionPermissionForOrigin: WKSecurityOrigin,
         initiatedByFrame: WKFrameInfo,
         decisionHandler: (WKPermissionDecision) -> Unit,
-    ) = Unit
+    ) {
+        println("requestDeviceOrientationAndMotionPermissionForOrigin+decisionHandler")
+        println(requestDeviceOrientationAndMotionPermissionForOrigin)
+        println(initiatedByFrame)
+    }
 
     override fun webView(
         webView: WKWebView,
         commitPreviewingViewController: UIViewController,
-    ) = Unit
+    ) {
+        println("commitPreviewingViewController")
+        println(commitPreviewingViewController)
+    }
 
     override fun webView(
         webView: WKWebView,
         shouldPreviewElement: WKPreviewElementInfo,
-    ): Boolean = false
+    ): Boolean {
+        println("shouldPreviewElement")
+        println(shouldPreviewElement)
+
+        return false
+    }
 
     override fun webView(
         webView: WKWebView,
         createWebViewWithConfiguration: WKWebViewConfiguration,
         forNavigationAction: WKNavigationAction,
         windowFeatures: WKWindowFeatures,
-    ): WKWebView = webView
+    ): WKWebView {
+        println("createWebViewWithConfiguration+forNavigationAction+windowFeatures")
+        println(createWebViewWithConfiguration)
+        println(forNavigationAction)
+        println(windowFeatures)
+
+        return webView
+    }
 
     override fun webView(
         webView: WKWebView,
         runJavaScriptAlertPanelWithMessage: String,
         initiatedByFrame: WKFrameInfo,
         completionHandler: () -> Unit,
-    ) = Unit
+    ) {
+        println("runJavaScriptAlertPanelWithMessage+completionHandler")
+        println(runJavaScriptAlertPanelWithMessage)
+        println(initiatedByFrame)
+    }
 
     @ObjCSignatureOverride
     override fun webView(
         webView: WKWebView,
         contextMenuWillPresentForElement: WKContextMenuElementInfo,
-    ) = Unit
+    ) {
+        println("contextMenuWillPresentForElement")
+        println(contextMenuWillPresentForElement)
+    }
 
     override fun webView(
         webView: WKWebView,
@@ -71,7 +100,12 @@ class NativeUIDelegate :
         initiatedByFrame: WKFrameInfo,
         type: WKMediaCaptureType,
         decisionHandler: (WKPermissionDecision) -> Unit,
-    ) = Unit
+    ) {
+        println("requestMediaCapturePermissionForOrigin+decisionHandler")
+        println(requestMediaCapturePermissionForOrigin)
+        println(initiatedByFrame)
+        println(type)
+    }
 
     override fun webView(
         webView: WKWebView,
@@ -79,52 +113,85 @@ class NativeUIDelegate :
         defaultText: String?,
         initiatedByFrame: WKFrameInfo,
         completionHandler: (String?) -> Unit,
-    ) = Unit
+    ) {
+        println("runJavaScriptTextInputPanelWithPrompt+completionHandler")
+        println(runJavaScriptTextInputPanelWithPrompt)
+        println(defaultText)
+        println(initiatedByFrame)
+    }
 
     override fun webView(
         webView: WKWebView,
         contextMenuForElement: WKContextMenuElementInfo,
         willCommitWithAnimator: UIContextMenuInteractionCommitAnimatingProtocol,
-    ) = Unit
+    ) {
+        println("contextMenuForElement+willCommitWithAnimator")
+        println(contextMenuForElement)
+        println(willCommitWithAnimator)
+    }
 
     override fun webView(
         webView: WKWebView,
         previewingViewControllerForElement: WKPreviewElementInfo,
         defaultActions: List<*>,
-    ): UIViewController? = null
+    ): UIViewController? {
+        println("previewingViewControllerForElement+defaultActions")
+        println(previewingViewControllerForElement)
+        println(defaultActions)
+
+        return null
+    }
 
     override fun webView(
         webView: WKWebView,
         contextMenuConfigurationForElement: WKContextMenuElementInfo,
         completionHandler: (UIContextMenuConfiguration?) -> Unit,
-    ) = Unit
+    ) {
+        println("contextMenuConfigurationForElement+completionHandler")
+        println(contextMenuConfigurationForElement)
+    }
 
     @ObjCSignatureOverride
     override fun webView(
         webView: WKWebView,
         willDismissEditMenuWithAnimator: UIEditMenuInteractionAnimatingProtocol,
-    ) = Unit
+    ) {
+        println("willDismissEditMenuWithAnimator")
+        println(willDismissEditMenuWithAnimator)
+    }
 
     @ObjCSignatureOverride
     override fun webView(
         webView: WKWebView,
         willPresentEditMenuWithAnimator: UIEditMenuInteractionAnimatingProtocol,
-    ) = Unit
+    ) {
+        println("willPresentEditMenuWithAnimator")
+        println(willPresentEditMenuWithAnimator)
+    }
 
     override fun webView(
         webView: WKWebView,
         runJavaScriptConfirmPanelWithMessage: String,
         initiatedByFrame: WKFrameInfo,
         completionHandler: (Boolean) -> Unit,
-    ) = Unit
+    ) {
+        println("runJavaScriptConfirmPanelWithMessage+completionHandler")
+        println(runJavaScriptConfirmPanelWithMessage)
+        println(initiatedByFrame)
+    }
 
     @ObjCSignatureOverride
     override fun webView(
         webView: WKWebView,
         contextMenuDidEndForElement: WKContextMenuElementInfo,
-    ) = Unit
+    ) {
+        println("contextMenuDidEndForElement")
+        println(contextMenuDidEndForElement)
+    }
 
     override fun webViewDidClose(
         webView: WKWebView,
-    ) = Unit
+    ) {
+        println("webViewDidClose")
+    }
 }
