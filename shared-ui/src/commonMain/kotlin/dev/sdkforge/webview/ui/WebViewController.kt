@@ -16,6 +16,8 @@ abstract class WebViewController : WebViewState {
 
     override var pageState: WebPageState by mutableStateOf(WebPageState.Empty)
         internal set
+    override var title: String? by mutableStateOf(null)
+        internal set
 
     internal abstract fun attach()
     internal abstract fun detach()
@@ -28,6 +30,7 @@ abstract class WebViewController : WebViewState {
 @Stable
 interface WebViewState {
     val pageState: WebPageState
+    val title: String?
 }
 
 @Composable
