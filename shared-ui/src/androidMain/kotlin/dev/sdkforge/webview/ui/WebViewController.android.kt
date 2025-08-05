@@ -25,7 +25,9 @@ internal class NativeWebViewController(
             webViewClient = NativeWebViewClient(
                 webViewController = this@NativeWebViewController,
             )
-            webChromeClient = NativeWebChromeClient()
+            webChromeClient = NativeWebChromeClient(
+                webViewController = this@NativeWebViewController,
+            )
 
             with(settings) {
                 javaScriptEnabled = true
