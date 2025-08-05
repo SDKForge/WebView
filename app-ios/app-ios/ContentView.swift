@@ -5,7 +5,7 @@ struct ContentView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         ComposeAppViewControllerKt.create()
     }
-    
+
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
