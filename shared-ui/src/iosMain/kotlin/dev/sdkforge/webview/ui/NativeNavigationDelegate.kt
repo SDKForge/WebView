@@ -29,6 +29,7 @@ internal class NativeNavigationDelegate(
         didStartProvisionalNavigation: WKNavigation?,
     ) {
         println("didStartProvisionalNavigation")
+        println(didStartProvisionalNavigation)
     }
 
     override fun webView(
@@ -37,6 +38,9 @@ internal class NativeNavigationDelegate(
         completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Unit,
     ) {
         println("didReceiveAuthenticationChallenge+completionHandler")
+        println(didReceiveAuthenticationChallenge)
+
+        webViewController.title = webView.title
 
         completionHandler.invoke(NSURLSessionAuthChallengePerformDefaultHandling, null)
     }
@@ -48,6 +52,8 @@ internal class NativeNavigationDelegate(
         withError: NSError,
     ) {
         println("didFailNavigation+withError")
+        println(didFailNavigation)
+        println(withError)
     }
 
     @ObjCSignatureOverride
@@ -57,6 +63,8 @@ internal class NativeNavigationDelegate(
         withError: NSError,
     ) {
         println("didFailProvisionalNavigation+withError")
+        println(didFailProvisionalNavigation)
+        println(withError)
     }
 
     override fun webView(
@@ -65,6 +73,7 @@ internal class NativeNavigationDelegate(
         decisionHandler: (WKNavigationActionPolicy) -> Unit,
     ) {
         println("decidePolicyForNavigationAction+decisionHandler")
+        println(decidePolicyForNavigationAction)
     }
 
     override fun webView(
@@ -74,6 +83,8 @@ internal class NativeNavigationDelegate(
         decisionHandler: (WKNavigationActionPolicy, WKWebpagePreferences?) -> Unit,
     ) {
         println("decidePolicyForNavigationAction+preferences+decisionHandler")
+        println(decidePolicyForNavigationAction)
+        println(preferences)
 
         decisionHandler.invoke(WKNavigationActionPolicy.WKNavigationActionPolicyAllow, null)
     }
@@ -84,6 +95,8 @@ internal class NativeNavigationDelegate(
         didBecomeDownload: WKDownload,
     ) {
         println("navigationAction+didBecomeDownload")
+        println(navigationAction)
+        println(didBecomeDownload)
     }
 
     override fun webView(
@@ -92,6 +105,7 @@ internal class NativeNavigationDelegate(
         decisionHandler: (WKNavigationResponsePolicy) -> Unit,
     ) {
         println("decidePolicyForNavigationResponse+decisionHandler")
+        println(decidePolicyForNavigationResponse)
 
         decisionHandler.invoke(WKNavigationResponsePolicy.WKNavigationResponsePolicyAllow)
     }
@@ -102,6 +116,8 @@ internal class NativeNavigationDelegate(
         didBecomeDownload: WKDownload,
     ) {
         println("navigationResponse+didBecomeDownload")
+        println(navigationResponse)
+        println(didBecomeDownload)
     }
 
     @ObjCSignatureOverride
@@ -110,6 +126,7 @@ internal class NativeNavigationDelegate(
         didReceiveServerRedirectForProvisionalNavigation: WKNavigation?,
     ) {
         println("didReceiveServerRedirectForProvisionalNavigation")
+        println(didReceiveServerRedirectForProvisionalNavigation)
     }
 
     override fun webView(
@@ -118,6 +135,7 @@ internal class NativeNavigationDelegate(
         shouldAllowDeprecatedTLS: (Boolean) -> Unit,
     ) {
         println("authenticationChallenge+shouldAllowDeprecatedTLS")
+        println(authenticationChallenge)
     }
 
     @ObjCSignatureOverride
@@ -126,6 +144,7 @@ internal class NativeNavigationDelegate(
         didFinishNavigation: WKNavigation?,
     ) {
         println("didFinishNavigation")
+        println(didFinishNavigation)
 
         webViewController.pageState = WebPageState.Loaded(url = webView.URL?.absoluteString.orEmpty())
     }
@@ -136,6 +155,7 @@ internal class NativeNavigationDelegate(
         didCommitNavigation: WKNavigation?,
     ) {
         println("didCommitNavigation")
+        println(didCommitNavigation)
 
         webViewController.pageState = WebPageState.Loading(url = webView.URL?.absoluteString.orEmpty())
     }
