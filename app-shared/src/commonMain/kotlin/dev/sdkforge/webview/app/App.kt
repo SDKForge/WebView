@@ -1,37 +1,34 @@
 package dev.sdkforge.webview.app
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import dev.sdkforge.webview.core.currentPlatform
+import dev.sdkforge.webview.ui.WebView
+import dev.sdkforge.webview.ui.WebViewController
 
 @Composable
 fun App(
+    webViewController: WebViewController,
     modifier: Modifier = Modifier,
 ) = ApplicationTheme {
+    LaunchedEffect(Unit) {
+        webViewController.platformWebView.load("https://github.com/SDKForge/WebView")
+    }
+    LaunchedEffect(webViewController.pageState) {
+        println("Page state: ${webViewController.pageState}")
+    }
+    LaunchedEffect(webViewController.title) {
+        println("Title: ${webViewController.title}")
+    }
+
     Surface(
         modifier = modifier,
         color = MaterialTheme.colorScheme.background,
     ) {
-        Column(
-            verticalArrangement = Arrangement.spacedBy(
-                space = 8.dp,
-                alignment = Alignment.CenterVertically,
-            ),
-            horizontalAlignment = Alignment.CenterHorizontally,
-        ) {
-            Text(
-                text = "Platform name: ${currentPlatform.name}",
-            )
-            Text(
-                text = "Platform version: ${currentPlatform.version}",
-            )
-        }
+        WebView(
+            webViewController = webViewController,
+        )
     }
 }
