@@ -51,7 +51,7 @@ actual fun rememberWebViewController(
 ): WebViewController {
     val context = LocalContext.current
 
-    return remember(interceptors, context) {
+    return remember(interceptors, config, context) {
         NativeWebViewController(interceptors = interceptors, config = config, context = context)
     }
 }
