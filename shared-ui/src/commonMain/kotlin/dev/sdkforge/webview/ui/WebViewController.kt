@@ -5,6 +5,9 @@ import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import dev.sdkforge.webview.domain.RequestInterceptor
+import dev.sdkforge.webview.domain.WebPageState
+import dev.sdkforge.webview.domain.WebViewConfig
 import dev.sdkforge.webview.ui.internal.PlatformWebView
 
 @Stable
