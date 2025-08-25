@@ -1,4 +1,4 @@
-package dev.sdkforge.webview.ui
+package dev.sdkforge.webview.domain
 
 sealed interface WebPageState {
     data object Empty : WebPageState

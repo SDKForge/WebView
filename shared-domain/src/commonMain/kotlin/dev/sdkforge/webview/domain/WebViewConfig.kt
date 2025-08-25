@@ -1,3 +1,3 @@
-package dev.sdkforge.webview.ui
+package dev.sdkforge.webview.domain
 
 data class WebViewConfig(val isDebug: Boolean = false)
