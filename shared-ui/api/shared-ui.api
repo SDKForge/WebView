@@ -1,70 +1,17 @@
-public abstract interface class dev/sdkforge/webview/ui/RequestInterceptor {
-	public abstract fun intercept (Ljava/lang/String;)Z
-}
-
-public abstract interface class dev/sdkforge/webview/ui/WebPageState {
-}
-
-public final class dev/sdkforge/webview/ui/WebPageState$Empty : dev/sdkforge/webview/ui/WebPageState {
-	public static final field $stable I
-	public static final field INSTANCE Ldev/sdkforge/webview/ui/WebPageState$Empty;
-	public fun equals (Ljava/lang/Object;)Z
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
-}
-
-public final class dev/sdkforge/webview/ui/WebPageState$Loaded : dev/sdkforge/webview/ui/WebPageState {
-	public static final field $stable I
-	public fun <init> (Ljava/lang/String;)V
-	public final fun component1 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;)Ldev/sdkforge/webview/ui/WebPageState$Loaded;
-	public static synthetic fun copy$default (Ldev/sdkforge/webview/ui/WebPageState$Loaded;Ljava/lang/String;ILjava/lang/Object;)Ldev/sdkforge/webview/ui/WebPageState$Loaded;
-	public fun equals (Ljava/lang/Object;)Z
-	public final fun getUrl ()Ljava/lang/String;
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
-}
-
-public final class dev/sdkforge/webview/ui/WebPageState$Loading : dev/sdkforge/webview/ui/WebPageState {
-	public static final field $stable I
-	public fun <init> (Ljava/lang/String;)V
-	public final fun component1 ()Ljava/lang/String;
-	public final fun copy (Ljava/lang/String;)Ldev/sdkforge/webview/ui/WebPageState$Loading;
-	public static synthetic fun copy$default (Ldev/sdkforge/webview/ui/WebPageState$Loading;Ljava/lang/String;ILjava/lang/Object;)Ldev/sdkforge/webview/ui/WebPageState$Loading;
-	public fun equals (Ljava/lang/Object;)Z
-	public final fun getUrl ()Ljava/lang/String;
-	public fun hashCode ()I
-	public fun toString ()Ljava/lang/String;
-}
-
-public final class dev/sdkforge/webview/ui/WebViewConfig {
-	public static final field $stable I
-	public fun <init> ()V
-	public fun <init> (Z)V
-	public synthetic fun <init> (ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun component1 ()Z
-	public final fun copy (Z)Ldev/sdkforge/webview/ui/WebViewConfig;
-	public static synthetic fun copy$default (Ldev/sdkforge/webview/ui/WebViewConfig;ZILjava/lang/Object;)Ldev/sdkforge/webview/ui/WebViewConfig;
-	public fun equals (Ljava/lang/Object;)Z
-	public fun hashCode ()I
-	public final fun isDebug ()Z
-	public fun toString ()Ljava/lang/String;
-}
-
 public abstract class dev/sdkforge/webview/ui/WebViewController : dev/sdkforge/webview/ui/WebViewState {
 	public static final field $stable I
 	public fun <init> ()V
-	public fun getPageState ()Ldev/sdkforge/webview/ui/WebPageState;
+	public fun getPageState ()Ldev/sdkforge/webview/domain/WebPageState;
 	public abstract fun getPlatformWebView ()Ldev/sdkforge/webview/ui/internal/PlatformWebView;
 	public fun getTitle ()Ljava/lang/String;
 }
 
 public final class dev/sdkforge/webview/ui/WebViewController_androidKt {
-	public static final fun rememberWebViewController (Ljava/util/List;Ldev/sdkforge/webview/ui/WebViewConfig;Landroidx/compose/runtime/Composer;II)Ldev/sdkforge/webview/ui/WebViewController;
+	public static final fun rememberWebViewController (Ljava/util/List;Ldev/sdkforge/webview/domain/WebViewConfig;Landroidx/compose/runtime/Composer;II)Ldev/sdkforge/webview/ui/WebViewController;
 }
 
 public abstract interface class dev/sdkforge/webview/ui/WebViewState {
-	public abstract fun getPageState ()Ldev/sdkforge/webview/ui/WebPageState;
+	public abstract fun getPageState ()Ldev/sdkforge/webview/domain/WebPageState;
 	public abstract fun getTitle ()Ljava/lang/String;
 }
 

@@ -1,5 +1,6 @@
 package dev.sdkforge.webview.ui
 
+import dev.sdkforge.webview.domain.WebPageState
 import kotlinx.cinterop.ObjCSignatureOverride
 import platform.Foundation.NSError
 import platform.Foundation.NSURLAuthenticationChallenge

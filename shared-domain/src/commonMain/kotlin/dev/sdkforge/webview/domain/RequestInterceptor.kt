@@ -1,4 +1,4 @@
-package dev.sdkforge.webview.ui
+package dev.sdkforge.webview.domain
 
 interface RequestInterceptor {
     fun intercept(

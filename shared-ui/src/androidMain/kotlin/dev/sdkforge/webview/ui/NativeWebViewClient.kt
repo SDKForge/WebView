@@ -14,6 +14,7 @@ import android.webkit.WebResourceRequest
 import android.webkit.WebResourceResponse
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import dev.sdkforge.webview.domain.WebPageState
 
 @Suppress("ktlint:standard:class-signature")
 internal class NativeWebViewClient(
