@@ -6,17 +6,13 @@ plugins {
     alias(libs.plugins.build.logic.library.kmp)
     alias(libs.plugins.build.logic.library.android)
     alias(libs.plugins.build.logic.library.publishing)
-    alias(libs.plugins.compose.multiplatform)
-    alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(projects.sharedDomain)
-
-                implementation(compose.foundation)
+                // put your multiplatform dependencies here
             }
         }
         commonTest {
@@ -24,14 +20,9 @@ kotlin {
                 implementation(libs.kotlin.test)
             }
         }
-        androidMain {
-            dependencies {
-                implementation("androidx.webkit:webkit:1.14.0")
-            }
-        }
     }
 }
 
 android {
-    namespace = "dev.sdkforge.webview.ui"
+    namespace = "dev.sdkforge.webview.domain"
 }
