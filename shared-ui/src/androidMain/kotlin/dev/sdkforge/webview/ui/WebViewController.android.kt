@@ -7,6 +7,8 @@ import android.webkit.WebViewClient
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
+import dev.sdkforge.webview.domain.RequestInterceptor
+import dev.sdkforge.webview.domain.WebViewConfig
 import dev.sdkforge.webview.ui.internal.PlatformWebView
 
 internal class NativeWebViewController(
