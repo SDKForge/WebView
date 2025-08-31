@@ -1,6 +1,6 @@
 package dev.sdkforge.webview
 
-import dev.sdkforge.template.Library.VERSION
+import dev.sdkforge.webview.Library.VERSION
 
 /**
  * Library metadata and version information.
