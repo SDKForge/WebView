@@ -11,6 +11,10 @@ plugins {
 }
 
 kotlin {
+    androidLibrary {
+        namespace = "dev.sdkforge.webview.ui"
+    }
+
     sourceSets {
         commonMain {
             dependencies {
@@ -30,8 +34,4 @@ kotlin {
             }
         }
     }
-}
-
-android {
-    namespace = "dev.sdkforge.webview.ui"
 }
