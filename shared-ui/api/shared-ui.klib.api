@@ -1,0 +1,106 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.sdkforge.webview:shared-ui>
+abstract interface dev.sdkforge.webview.ui/WebViewState { // dev.sdkforge.webview.ui/WebViewState|null[0]
+    abstract val pageState // dev.sdkforge.webview.ui/WebViewState.pageState|{}pageState[0]
+        abstract fun <get-pageState>(): dev.sdkforge.webview.domain/WebPageState // dev.sdkforge.webview.ui/WebViewState.pageState.<get-pageState>|<get-pageState>(){}[0]
+    abstract val title // dev.sdkforge.webview.ui/WebViewState.title|{}title[0]
+        abstract fun <get-title>(): kotlin/String? // dev.sdkforge.webview.ui/WebViewState.title.<get-title>|<get-title>(){}[0]
+}
+
+abstract class dev.sdkforge.webview.ui/WebViewController : dev.sdkforge.webview.ui/WebViewState { // dev.sdkforge.webview.ui/WebViewController|null[0]
+    constructor <init>() // dev.sdkforge.webview.ui/WebViewController.<init>|<init>(){}[0]
+
+    abstract val platformWebView // dev.sdkforge.webview.ui/WebViewController.platformWebView|{}platformWebView[0]
+        abstract fun <get-platformWebView>(): dev.sdkforge.webview.ui.internal/PlatformWebView // dev.sdkforge.webview.ui/WebViewController.platformWebView.<get-platformWebView>|<get-platformWebView>(){}[0]
+
+    open var pageState // dev.sdkforge.webview.ui/WebViewController.pageState|{}pageState[0]
+        open fun <get-pageState>(): dev.sdkforge.webview.domain/WebPageState // dev.sdkforge.webview.ui/WebViewController.pageState.<get-pageState>|<get-pageState>(){}[0]
+    open var title // dev.sdkforge.webview.ui/WebViewController.title|{}title[0]
+        open fun <get-title>(): kotlin/String? // dev.sdkforge.webview.ui/WebViewController.title.<get-title>|<get-title>(){}[0]
+}
+
+final class dev.sdkforge.webview.ui.internal/PlatformWebView { // dev.sdkforge.webview.ui.internal/PlatformWebView|null[0]
+    constructor <init>() // dev.sdkforge.webview.ui.internal/PlatformWebView.<init>|<init>(){}[0]
+
+    final fun canGoBack(): kotlin/Boolean // dev.sdkforge.webview.ui.internal/PlatformWebView.canGoBack|canGoBack(){}[0]
+    final fun canGoForward(): kotlin/Boolean // dev.sdkforge.webview.ui.internal/PlatformWebView.canGoForward|canGoForward(){}[0]
+    final fun goBack() // dev.sdkforge.webview.ui.internal/PlatformWebView.goBack|goBack(){}[0]
+    final fun goForward() // dev.sdkforge.webview.ui.internal/PlatformWebView.goForward|goForward(){}[0]
+    final fun load(kotlin/String, kotlin.collections/Map<kotlin/String, kotlin/String> = ...) // dev.sdkforge.webview.ui.internal/PlatformWebView.load|load(kotlin.String;kotlin.collections.Map<kotlin.String,kotlin.String>){}[0]
+    final fun reload() // dev.sdkforge.webview.ui.internal/PlatformWebView.reload|reload(){}[0]
+}
+
+final class dev.sdkforge.webview.ui/NativeUIDelegate : platform.WebKit/WKUIDelegateProtocol, platform.darwin/NSObject { // dev.sdkforge.webview.ui/NativeUIDelegate|null[0]
+    constructor <init>() // dev.sdkforge.webview.ui/NativeUIDelegate.<init>|<init>(){}[0]
+
+    final val debugDescription // dev.sdkforge.webview.ui/NativeUIDelegate.debugDescription|{}debugDescription[0]
+        final fun <get-debugDescription>(): kotlin/String? // dev.sdkforge.webview.ui/NativeUIDelegate.debugDescription.<get-debugDescription>|objc:debugDescription#Accessor[0]
+    final val description // dev.sdkforge.webview.ui/NativeUIDelegate.description|{}description[0]
+        final fun <get-description>(): kotlin/String? // dev.sdkforge.webview.ui/NativeUIDelegate.description.<get-description>|objc:description#Accessor[0]
+    final val hash // dev.sdkforge.webview.ui/NativeUIDelegate.hash|{}hash[0]
+        final fun <get-hash>(): kotlin/ULong // dev.sdkforge.webview.ui/NativeUIDelegate.hash.<get-hash>|objc:hash#Accessor[0]
+    final val superclass // dev.sdkforge.webview.ui/NativeUIDelegate.superclass|{}superclass[0]
+        final fun <get-superclass>(): kotlinx.cinterop/ObjCClass? // dev.sdkforge.webview.ui/NativeUIDelegate.superclass.<get-superclass>|objc:superclass#Accessor[0]
+
+    final fun class(): kotlinx.cinterop/ObjCClass? // dev.sdkforge.webview.ui/NativeUIDelegate.class|objc:class[0]
+    final fun conformsToProtocol(objcnames.classes/Protocol?): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.conformsToProtocol|objc:conformsToProtocol:[0]
+    final fun copy(): kotlin/Any? // dev.sdkforge.webview.ui/NativeUIDelegate.copy|objc:copy[0]
+    final fun debugDescription(): kotlin/String? // dev.sdkforge.webview.ui/NativeUIDelegate.debugDescription|objc:debugDescription[0]
+    final fun description(): kotlin/String? // dev.sdkforge.webview.ui/NativeUIDelegate.description|objc:description[0]
+    final fun doesNotRecognizeSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?) // dev.sdkforge.webview.ui/NativeUIDelegate.doesNotRecognizeSelector|objc:doesNotRecognizeSelector:[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.equals|equals(other:kotlin.Any?){}[0]
+    final fun finalize() // dev.sdkforge.webview.ui/NativeUIDelegate.finalize|objc:finalize[0]
+    final fun forwardInvocation(objcnames.classes/NSInvocation?) // dev.sdkforge.webview.ui/NativeUIDelegate.forwardInvocation|objc:forwardInvocation:[0]
+    final fun forwardingTargetForSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?): kotlin/Any? // dev.sdkforge.webview.ui/NativeUIDelegate.forwardingTargetForSelector|objc:forwardingTargetForSelector:[0]
+    final fun hash(): kotlin/ULong // dev.sdkforge.webview.ui/NativeUIDelegate.hash|objc:hash[0]
+    final fun hashCode(): kotlin/Int // dev.sdkforge.webview.ui/NativeUIDelegate.hashCode|hashCode(){}[0]
+    final fun init(): platform.darwin/NSObject? // dev.sdkforge.webview.ui/NativeUIDelegate.init|objc:init[0]
+    final fun isEqual(kotlin/Any?): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.isEqual|objc:isEqual:[0]
+    final fun isKindOfClass(kotlinx.cinterop/ObjCClass?): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.isKindOfClass|objc:isKindOfClass:[0]
+    final fun isMemberOfClass(kotlinx.cinterop/ObjCClass?): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.isMemberOfClass|objc:isMemberOfClass:[0]
+    final fun isProxy(): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.isProxy|objc:isProxy[0]
+    final fun methodForSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?): kotlinx.cinterop/CPointer<kotlinx.cinterop/CFunction<kotlin/Function0<kotlin/Unit>>>? // dev.sdkforge.webview.ui/NativeUIDelegate.methodForSelector|objc:methodForSelector:[0]
+    final fun methodSignatureForSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?): objcnames.classes/NSMethodSignature? // dev.sdkforge.webview.ui/NativeUIDelegate.methodSignatureForSelector|objc:methodSignatureForSelector:[0]
+    final fun mutableCopy(): kotlin/Any? // dev.sdkforge.webview.ui/NativeUIDelegate.mutableCopy|objc:mutableCopy[0]
+    final fun performSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?): kotlin/Any? // dev.sdkforge.webview.ui/NativeUIDelegate.performSelector|objc:performSelector:[0]
+    final fun performSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?, kotlin/Any?): kotlin/Any? // dev.sdkforge.webview.ui/NativeUIDelegate.performSelector|objc:performSelector:withObject:[0]
+    final fun performSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?, kotlin/Any?, kotlin/Any?): kotlin/Any? // dev.sdkforge.webview.ui/NativeUIDelegate.performSelector|objc:performSelector:withObject:withObject:[0]
+    final fun respondsToSelector(kotlinx.cinterop/CPointer<out kotlinx.cinterop/CPointed>?): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.respondsToSelector|objc:respondsToSelector:[0]
+    final fun superclass(): kotlinx.cinterop/ObjCClass? // dev.sdkforge.webview.ui/NativeUIDelegate.superclass|objc:superclass[0]
+    final fun toString(): kotlin/String // dev.sdkforge.webview.ui/NativeUIDelegate.toString|toString(){}[0]
+    final fun webView(platform.WebKit/WKWebView, kotlin/String, kotlin/Function1<kotlin/Long, kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:showLockdownModeFirstUseMessage:completionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, kotlin/String, kotlin/String?, platform.WebKit/WKFrameInfo, kotlin/Function1<kotlin/String?, kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:completionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, kotlin/String, platform.WebKit/WKFrameInfo, kotlin/Function0<kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:completionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, kotlin/String, platform.WebKit/WKFrameInfo, kotlin/Function1<kotlin/Boolean, kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:completionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.UIKit/UIEditMenuInteractionAnimatingProtocol) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:willDismissEditMenuWithAnimator:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.UIKit/UIEditMenuInteractionAnimatingProtocol) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:willPresentEditMenuWithAnimator:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.UIKit/UIViewController) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:commitPreviewingViewController:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKContextMenuElementInfo) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:contextMenuDidEndForElement:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKContextMenuElementInfo) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:contextMenuWillPresentForElement:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKContextMenuElementInfo, kotlin/Function1<platform.UIKit/UIContextMenuConfiguration?, kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:contextMenuConfigurationForElement:completionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKContextMenuElementInfo, platform.UIKit/UIContextMenuInteractionCommitAnimatingProtocol) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:contextMenuForElement:willCommitWithAnimator:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKOpenPanelParameters, platform.WebKit/WKFrameInfo, kotlin/Function1<kotlin.collections/List<*>?, kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:runOpenPanelWithParameters:initiatedByFrame:completionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKPreviewElementInfo): kotlin/Boolean // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:shouldPreviewElement:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKPreviewElementInfo, kotlin.collections/List<*>): platform.UIKit/UIViewController? // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:previewingViewControllerForElement:defaultActions:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKSecurityOrigin, platform.WebKit/WKFrameInfo, kotlin/Function1<platform.WebKit/WKPermissionDecision, kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:requestDeviceOrientationAndMotionPermissionForOrigin:initiatedByFrame:decisionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKSecurityOrigin, platform.WebKit/WKFrameInfo, platform.WebKit/WKMediaCaptureType, kotlin/Function1<platform.WebKit/WKPermissionDecision, kotlin/Unit>) // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:requestMediaCapturePermissionForOrigin:initiatedByFrame:type:decisionHandler:[0]
+    final fun webView(platform.WebKit/WKWebView, platform.WebKit/WKWebViewConfiguration, platform.WebKit/WKNavigationAction, platform.WebKit/WKWindowFeatures): platform.WebKit/WKWebView // dev.sdkforge.webview.ui/NativeUIDelegate.webView|objc:webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:[0]
+    final fun webViewDidClose(platform.WebKit/WKWebView) // dev.sdkforge.webview.ui/NativeUIDelegate.webViewDidClose|objc:webViewDidClose:[0]
+}
+
+final val dev.sdkforge.webview.ui.internal/dev_sdkforge_webview_ui_internal_PlatformWebView$stableprop // dev.sdkforge.webview.ui.internal/dev_sdkforge_webview_ui_internal_PlatformWebView$stableprop|#static{}dev_sdkforge_webview_ui_internal_PlatformWebView$stableprop[0]
+final val dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_NativeUIDelegate$stableprop // dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_NativeUIDelegate$stableprop|#static{}dev_sdkforge_webview_ui_NativeUIDelegate$stableprop[0]
+final val dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_WebViewController$stableprop // dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_WebViewController$stableprop|#static{}dev_sdkforge_webview_ui_WebViewController$stableprop[0]
+
+final fun dev.sdkforge.webview.ui.internal/dev_sdkforge_webview_ui_internal_PlatformWebView$stableprop_getter(): kotlin/Int // dev.sdkforge.webview.ui.internal/dev_sdkforge_webview_ui_internal_PlatformWebView$stableprop_getter|dev_sdkforge_webview_ui_internal_PlatformWebView$stableprop_getter(){}[0]
+final fun dev.sdkforge.webview.ui/MainViewController(): platform.UIKit/UIViewController // dev.sdkforge.webview.ui/MainViewController|MainViewController(){}[0]
+final fun dev.sdkforge.webview.ui/WebView(dev.sdkforge.webview.ui/WebViewController?, androidx.compose.ui/Modifier?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // dev.sdkforge.webview.ui/WebView|WebView(dev.sdkforge.webview.ui.WebViewController?;androidx.compose.ui.Modifier?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_NativeUIDelegate$stableprop_getter(): kotlin/Int // dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_NativeUIDelegate$stableprop_getter|dev_sdkforge_webview_ui_NativeUIDelegate$stableprop_getter(){}[0]
+final fun dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_WebViewController$stableprop_getter(): kotlin/Int // dev.sdkforge.webview.ui/dev_sdkforge_webview_ui_WebViewController$stableprop_getter|dev_sdkforge_webview_ui_WebViewController$stableprop_getter(){}[0]
+final fun dev.sdkforge.webview.ui/rememberWebViewController(kotlin.collections/List<dev.sdkforge.webview.domain/RequestInterceptor>?, dev.sdkforge.webview.domain/WebViewConfig?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int): dev.sdkforge.webview.ui/WebViewController // dev.sdkforge.webview.ui/rememberWebViewController|rememberWebViewController(kotlin.collections.List<dev.sdkforge.webview.domain.RequestInterceptor>?;dev.sdkforge.webview.domain.WebViewConfig?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]

@@ -1,0 +1,58 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64, iosX64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <dev.sdkforge.webview:shared-domain>
+abstract interface dev.sdkforge.webview.domain/RequestInterceptor { // dev.sdkforge.webview.domain/RequestInterceptor|null[0]
+    abstract fun intercept(kotlin/String): kotlin/Boolean // dev.sdkforge.webview.domain/RequestInterceptor.intercept|intercept(kotlin.String){}[0]
+}
+
+sealed interface dev.sdkforge.webview.domain/WebPageState { // dev.sdkforge.webview.domain/WebPageState|null[0]
+    final class Loaded : dev.sdkforge.webview.domain/WebPageState { // dev.sdkforge.webview.domain/WebPageState.Loaded|null[0]
+        constructor <init>(kotlin/String) // dev.sdkforge.webview.domain/WebPageState.Loaded.<init>|<init>(kotlin.String){}[0]
+
+        final val url // dev.sdkforge.webview.domain/WebPageState.Loaded.url|{}url[0]
+            final fun <get-url>(): kotlin/String // dev.sdkforge.webview.domain/WebPageState.Loaded.url.<get-url>|<get-url>(){}[0]
+
+        final fun component1(): kotlin/String // dev.sdkforge.webview.domain/WebPageState.Loaded.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): dev.sdkforge.webview.domain/WebPageState.Loaded // dev.sdkforge.webview.domain/WebPageState.Loaded.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sdkforge.webview.domain/WebPageState.Loaded.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sdkforge.webview.domain/WebPageState.Loaded.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sdkforge.webview.domain/WebPageState.Loaded.toString|toString(){}[0]
+    }
+
+    final class Loading : dev.sdkforge.webview.domain/WebPageState { // dev.sdkforge.webview.domain/WebPageState.Loading|null[0]
+        constructor <init>(kotlin/String) // dev.sdkforge.webview.domain/WebPageState.Loading.<init>|<init>(kotlin.String){}[0]
+
+        final val url // dev.sdkforge.webview.domain/WebPageState.Loading.url|{}url[0]
+            final fun <get-url>(): kotlin/String // dev.sdkforge.webview.domain/WebPageState.Loading.url.<get-url>|<get-url>(){}[0]
+
+        final fun component1(): kotlin/String // dev.sdkforge.webview.domain/WebPageState.Loading.component1|component1(){}[0]
+        final fun copy(kotlin/String = ...): dev.sdkforge.webview.domain/WebPageState.Loading // dev.sdkforge.webview.domain/WebPageState.Loading.copy|copy(kotlin.String){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sdkforge.webview.domain/WebPageState.Loading.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sdkforge.webview.domain/WebPageState.Loading.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sdkforge.webview.domain/WebPageState.Loading.toString|toString(){}[0]
+    }
+
+    final object Empty : dev.sdkforge.webview.domain/WebPageState { // dev.sdkforge.webview.domain/WebPageState.Empty|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // dev.sdkforge.webview.domain/WebPageState.Empty.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // dev.sdkforge.webview.domain/WebPageState.Empty.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // dev.sdkforge.webview.domain/WebPageState.Empty.toString|toString(){}[0]
+    }
+}
+
+final class dev.sdkforge.webview.domain/WebViewConfig { // dev.sdkforge.webview.domain/WebViewConfig|null[0]
+    constructor <init>(kotlin/Boolean = ...) // dev.sdkforge.webview.domain/WebViewConfig.<init>|<init>(kotlin.Boolean){}[0]
+
+    final val isDebug // dev.sdkforge.webview.domain/WebViewConfig.isDebug|{}isDebug[0]
+        final fun <get-isDebug>(): kotlin/Boolean // dev.sdkforge.webview.domain/WebViewConfig.isDebug.<get-isDebug>|<get-isDebug>(){}[0]
+
+    final fun component1(): kotlin/Boolean // dev.sdkforge.webview.domain/WebViewConfig.component1|component1(){}[0]
+    final fun copy(kotlin/Boolean = ...): dev.sdkforge.webview.domain/WebViewConfig // dev.sdkforge.webview.domain/WebViewConfig.copy|copy(kotlin.Boolean){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // dev.sdkforge.webview.domain/WebViewConfig.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // dev.sdkforge.webview.domain/WebViewConfig.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // dev.sdkforge.webview.domain/WebViewConfig.toString|toString(){}[0]
+}
